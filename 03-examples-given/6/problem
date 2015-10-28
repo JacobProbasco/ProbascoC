@@ -1,0 +1,27 @@
+Take each function in extended.c and from it create a file for each function.
+Then complile as shown here: 
+
+	$ cc main.c strcmp.c atoi.c check.c average.c  getaline.c -o main
+
+Then run the program.
+
+	$ ./main
+
+If you get ambitions try using the -c option.
+
+	$ cc -c  strcmp.c atoi.c check.c average.c getaline.c -o main
+
+The -c option will produce a .o file for each .c file.
+
+The above step will produce lots of .o files.
+
+You can then use the ar command.  ar is used to build static libraries
+as shown below.
+
+	$ ar r mylib.a strcmp.o atoi.o check.o average.o getaline.o
+	cc main.c mylib.aa -o main
+
+Then you can execute the program as:
+
+	$ ./main
+

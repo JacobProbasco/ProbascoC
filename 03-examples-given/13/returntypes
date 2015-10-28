@@ -1,0 +1,7 @@
+int 			strlen(char *s);
+int 			strlen(char s[]);
+
+void 			fun(void);
+
+double 			average(int data[], int howmany);
+struct employee		get_rec(void);
