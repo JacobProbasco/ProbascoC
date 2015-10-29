@@ -6,11 +6,13 @@
 #ifndef CARD_H
 #define CARD_H
 
+enum suits {CLUBS, DIAMONDS, HEARTS, SPADES};
+
 // NOTE: No Include stdio.h
 
 struct card {
     int rank;
-    char *suit;
+    enum suits suit;
 };
 
 void print_card(struct card);
