@@ -6,15 +6,13 @@
 #ifndef CARD_H
 #define CARD_H
 
-#include <stdio.h>
+// NOTE: No Include stdio.h
 
 struct card {
     int rank;
     char *suit;
-    
 };
 
 void print_card(struct card);
-
 
 #endif

@@ -6,6 +6,7 @@
 //
 //
 #include "card.h"
+
 #include <stdio.h>
 
 void print_card(struct card the_card)
@@ -14,4 +15,4 @@ void print_card(struct card the_card)
 }
 
 
-#endif
+// NOTE: No endif in introC
