@@ -11,7 +11,7 @@
 
 #include <sys/types.h>
 
-int get_guess(char *inpt, int *gues_int);
+void get_guess(int *gues_int);
 
 int main(void){
     
@@ -23,15 +23,11 @@ int main(void){
     
     int red, r, white, w;
         red = r = white = w = 0;
-    
-    // Get input from user (or NPC), for user, convert to int to list
-    
-    get_guess(input, gues);
-    
     // Generate 4 random numbers and store as c
     
+    // Get input from user (or NPC), for user, convert to int to list
+    get_guess(g);
     
-    // FUNC: Process input, store it.
     /// Account for 0s
     
     // FUNC: Check input against c
@@ -43,6 +39,7 @@ int main(void){
     /* Check if gues = code; return winning result */
     if(gues[0] == code[0] && gues[1] == code[1] && gues[2] == code[2] && gues[3] == code[3]){
         printf("Winning!\n");
+        return 0;
     }
     
     /* Set counters. Copy code into hit_save to track correct white and red guesses. */
@@ -83,10 +80,10 @@ int main(void){
     
 }
 
-int get_guess(char *inpt, int *gues_int){
-    char input[6];
+void get_guess(int *gues_int){
+    char inpt[6];
     printf("Guess a number:");
-    fgets(input, sizeof(input), stdin);
+    fgets(inpt, sizeof(inpt), stdin);
     
     for(;;) {
 
@@ -107,6 +104,7 @@ int get_guess(char *inpt, int *gues_int){
             }
             
         }
+        break;
     }
 }
 //int get_guess(int *const number, const int numbers, FILE *const in){
